@@ -9,8 +9,6 @@ scalr=pickle.load(open('scaling.pkl','rb'))
 @app.route('/')
 def home():
     return render_template('home.html')
-""" 
-Testing API
 
 @app.route('/predic_api',methods=['POST'])
 def predic_api():
@@ -21,7 +19,7 @@ def predic_api():
     output=regmodel.predict(new_data)
     print(output[0])
     return jsonify(output[0])
-"""
+
 
 @app.route('/predict',methods=['POST'])
 def predic():
